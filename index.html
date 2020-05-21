@@ -3,8 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <title>FE2020-1. HTML FORM</title>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+<!--
+    <input type="button">
+    <input type="checkbox">
+    <input type="color">
+    <input type="date">
+    <input type="datetime">
+    <input type="datetime-local">
+    <input type="email">
+    <input type="file">
+    <input type="hidden">
+    <input type="image">
+    <input type="month">
+    <input type="number">
+    <input type="password">
+    <input type="radio">
+    <input type="range">
+    <input type="reset">
+    <input type="search">
+    <input type="submit">
+    <input type="tel">
+    <input type="text">
+    <input type="time">
+    <input type="url">
+    <input type="week">
+-->
+
+
+<form action="#" method="get">
+
+    <fieldset>
+        <legend>User personal data</legend>
+        <label>
+            <span>Name</span>
+            <input type="text"
+                   name="userName"
+                   placeholder="first name"
+                   required
+                   pattern="[A-Z][a-z]{1,63}"
+                   value="Arthur">
+        </label>
+
+        <br>
+
+        <label>
+            <span>Surname</span>
+            <input type="text"
+                   name="userSurname"
+                   placeholder="last name"
+                   required
+                   pattern="[A-Z][a-z]{1,63}"
+                   value="Chubukliiev"
+            >
+        </label>
+        <br>
+
+        <label for="emailInput">Email address </label>
+        <input id="emailInput"
+               name="userEmail"
+               type="email"
+               required
+               placeholder="email address"
+               autocomplete="off"
+        >
+
+
+        <fieldset>
+            <legend>Gender</legend>
+            <label>
+                <input autofocus
+                       type="radio"
+                       name="gender"
+                       value="male"
+                       required
+                > Male
+            </label>
+
+            <br>
+
+            <label>
+                <input type="radio" name="gender" value="female"> Female
+            </label>
+
+            <br>
+
+            <label>
+                <input type="radio"
+                       name="gender"
+                       value="other"
+                       checked> Other
+            </label>
+        </fieldset>
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Your password</legend>
+        <label for="passwordInput">Password</label>
+        <input id="passwordInput"
+               name="userPassword"
+               type="password"
+               required
+               placeholder="password"
+               pattern="(?=.*[A-Z])(?=.*\d)^\w{8,60}$">
+
+        <br>
+        <label for="confirmPasswordInput">Confirm Password</label>
+        <input id="confirmPasswordInput"
+               name="userConfirmPassword"
+               type="password"
+               required
+               placeholder="confirm password"
+               pattern="(?=.*[A-Z])(?=.*\d)^\w{8,60}$">
+    </fieldset>
+
+    <fieldset>
+        <legend>Preferences</legend>
+        <label>
+            <input type="checkbox"
+                   name="preferences"
+                   value="Politic"
+            > Politic
+        </label>
+        <br>
+        <label>
+            <input type="checkbox"
+                   name="preferences"
+                   value="Sport"
+            > Sport
+        </label>
+        <br>
+        <label>
+            <input type="checkbox"
+                   name="preferences"
+                   value="Medical"
+            > Medical
+        </label>
+        <br>
+        <label>
+            <input type="checkbox"
+                   name="preferences"
+                   value="Music"
+            > Music
+        </label>
+        <br>
+        <label>
+            <input type="checkbox"
+                   name="preferences"
+                   value="Movie"
+            > Movie
+        </label>
+        <br>
+        <label>
+            <input type="checkbox"
+                   name="preferences"
+                   value="IT"
+            > High tech technology
+        </label>
+    </fieldset>
+
+    <button type="submit">Sign Up</button>
+    <!--    <input type="submit" value="Login">-->
+</form>
 
 </body>
 </html>
