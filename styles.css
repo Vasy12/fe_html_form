@@ -50,7 +50,12 @@ svg > path {
     fill: white;
 }
 
-input:checked ~ #pageNav {
+#pageNav.menuOpen {
     left: 0;
     transition-timing-function: ease-out;
+}
+
+button {
+    border: none;
+    background: none;
 }
